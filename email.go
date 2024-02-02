@@ -19,12 +19,6 @@ type EmailAddress struct {
 	DisplayName string `json:"displayName"`
 }
 
-type EmailAttachment struct {
-	Name            string `json:"name"`
-	ContentType     string `json:"contentType"`
-	ContentInBase64 string `json:"contentInBase64"`
-}
-
 type EmailRecipients struct {
 	To  []EmailAddress `json:"to"`
 	Cc  []EmailAddress `json:"cc,omitempty"`
@@ -33,11 +27,10 @@ type EmailRecipients struct {
 
 type Email struct {
 	sender        *EmailSender
-	SenderAddress string            `json:"senderAddress"`
-	Content       EmailContent      `json:"content"`
-	Recipients    EmailRecipients   `json:"recipients"`
-	Attachments   []EmailAttachment `json:"attachments"`
-	ReplyTo       []EmailAddress    `json:"replyTo,omitempty"`
+	SenderAddress string          `json:"senderAddress"`
+	Content       EmailContent    `json:"content"`
+	Recipients    EmailRecipients `json:"recipients"`
+	ReplyTo       []EmailAddress  `json:"replyTo,omitempty"`
 }
 
 type EmailSender struct {

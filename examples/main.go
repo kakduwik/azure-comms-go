@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/qwerty-iot/azure-comms-go"
+	azurecomms "github.com/kakduwik/azure-comms-go"
 )
 
 func main() {
